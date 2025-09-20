@@ -54,5 +54,11 @@ server.listen(PORT, () => {
     console.log(`Server is running at port ${PORT}`);
 });
 
+setInterval(() => {
+    try {
+        fetch("https://blood-donation-backend-pitc.onrender.com");
+    } catch (e) {}
+}, 840000);
+
 // Export Express app only (for testing or external usage)
 module.exports = app;
